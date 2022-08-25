@@ -1,2 +1,5 @@
 db.sqlite3
 .idea/
+./labelApp/__pycache__/
+./labelApp/migrations/
+./backend/__pycache__/
