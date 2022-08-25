@@ -1,0 +1,53 @@
+.btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.col{
+  width: fit-content;
+}
+
+.row {
+  width: fit-content;
+}
+
+.label {
+  padding-left: 10px;
+  width: fit-content;
+  background-color: lightgray;
+  outline-color: gray;
+  border-color: gray;
+}
+
+.label:hover {
+  background-color: gray;
+}
+
+.text {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.btn-sm {
+  margin-right: 10px;
+}
+
+.area {
+  height: 300px;
+}
+
+.home-section {
+  height: max-content;
+}
+
+::selection {
+  background: yellow;
+}
+
+.alert-success {
+  color: lawngreen;
+}
+
+.alert-warning {
+  color: red;
+}

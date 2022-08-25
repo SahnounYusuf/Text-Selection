@@ -1,0 +1,60 @@
+<section class="home-section">
+  <div class="py-5">
+    <div class="container">
+      <h5 class="text ">Test Technique</h5>
+      <br>
+      <div class="d-flex flex-wrap">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Type a lable"
+          #skill
+        />
+        <button class="btn btn-success" (click)="addSkill(skill.value)">Add</button>
+      </div>
+      <div class="row">
+        <div class="col" *ngFor="let label of skillList">
+          <div class="label" (click)="selecteLabel(label)">
+            <div class="d-flex">
+              <p class="text">{{label}}</p>
+              <button type="button" class="btn btn-sm btn-outline-danger" (click)="removeLabel(label)">
+                x
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="area album">
+    <div class="container">
+      <div (textSelect)="addLabelDescription( $event )" class="container">
+        <p id="description" class="selection">
+          Accomplished and highly-organized Project Manager (PMP certified) with a Ph.D. in physics and over 10 years of
+          professional experience managing complex projects in the financial industry. Eager to join ABC Bank to help
+          define product roll-out strategy, track progress against goals, and manage execution projects. At DEF Bank,
+          delivered a $20M, four-year project modernizing back-end functionalities that saved over $200M on
+          international transactions yearly.
+        </p>
+      </div>
+      <button class="btn btn-primary" (click)="exportData()">Export</button>
+      <div *ngIf="exported">
+        <span class="alert-success">Data Exported Successfully! </span>
+      </div>
+      <div *ngIf="warning">
+        <span class="alert-warning">Data Exported Successfully! </span>
+      </div>
+      <div class="col">
+        <div class="col" *ngFor="let label of selectedLabels.selected">
+          <div class="">
+            <div>
+              <p class="text">Label: {{label.label}}</p>
+              <p class="text">Selected: {{label.selected_text}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
